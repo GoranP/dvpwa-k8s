@@ -1,0 +1,11 @@
+postgres:
+  name: postgres
+  image: goranpp/postgres-secure
+  serviceName: postgres
+  serviceport: 5432
+  storageSize: 1Gi
+redis:
+  name: redis
+  serviceName: redis
+  serviceport: 6379
+  image: redis:latest

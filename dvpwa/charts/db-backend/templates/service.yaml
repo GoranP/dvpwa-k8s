@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.postgres.serviceName }}
+spec:
+  type: ClusterIP
+  ports:
+    - port: {{ .Values.postgres.serviceport }}
+      targetPort: tcp
+      protocol: TCP
+      name: tcp
+  selector:
+    app: {{ .Values.postgres.name }}
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.redis.serviceName }}
+spec:
+  type: ClusterIP
+  ports:
+    - port: {{ .Values.redis.serviceport }}
+      targetPort: tcp
+      protocol: TCP
+      name: tcp
+  selector:
+    app: {{ .Values.redis.name }}
+
