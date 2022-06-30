@@ -35,4 +35,4 @@ postgres-0               1/1     Running   0          69s
 redis-bfbc66d6c-5g6tg    1/1     Running   0          69s
 ```
 
-Access application with browser on [localhost:8080](localhost:8080)
+Access application with browser on [localhost:8080](http://localhost:8080)
